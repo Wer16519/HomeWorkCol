@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="pz_2.MainPage" Title="Главная">
+  
+    <ContentPage.ToolbarItems>
+        
+        <ToolbarItem Text="Один" 
+                     Order="Secondary" 
+                     Priority="0"/>
+        
+        <ToolbarItem Text="Два" 
+                     Order="Secondary" 
+                     Priority="1"/>
+        
+        <ToolbarItem Text="Три" 
+                     Order="Secondary" 
+                     Priority="2"/>
+        
+    </ContentPage.ToolbarItems>
+    
+    <ScrollView>
+        
+        <StackLayout Padding="20" Spacing="20">
+
+            <Border Stroke="Black">
+                <Entry Placeholder="Текстовое поле"
+                   PlaceholderColor="DarkGray"
+                   FontAttributes="Bold"
+                   FontFamily="Times new roman"
+                   FontSize="20"/>
+            </Border>
+
+            <Border Stroke="Black">
+                <Editor Placeholder="Большое текстовое поле"
+                        FontSize="19"
+                        HeightRequest="100"/>
+            </Border>
+
+            <Picker Title="Выберете страну" 
+                    BackgroundColor="Black" 
+                    TextColor="White"
+                    SelectedItem="Россия">
+                
+                <Picker.Items>
+                    
+                    <x:String>Россия</x:String>
+                    
+                    <x:String>Беларусь</x:String>
+                    
+                    <x:String>Германия</x:String>
+                    
+                    <x:String>США</x:String>
+                    
+                </Picker.Items>
+                
+            </Picker>
+            
+            <DatePicker BackgroundColor="Black" 
+                        TextColor="White"/>
+            
+            <TimePicker BackgroundColor="Black" 
+                        TextColor="White"
+                        />
+            
+            <Switch ThumbColor="White" 
+                    OnColor="LightGray"
+                    IsToggled="True"
+                    IsEnabled="False"/>
+            
+            <Label Text="текст Label"
+                   FontSize="20" 
+                   FontAttributes="Bold"/>
+            
+            <Label TextColor="Black" 
+                   FontSize="20" 
+                   Margin="20"
+                   Text="Progressbar" 
+                   x:Name="label1"/>
+            
+            <ProgressBar x:Name="Progress" 
+                         ProgressColor="LightGreen"
+                         IsVisible="Hidden"/>
+            
+            <ActivityIndicator IsRunning="True" 
+                               HeightRequest="100" 
+                               WidthRequest="100" 
+                               Color="Green"/>
+            
+            <Button Text="Кнопка" 
+                    BackgroundColor="Black" 
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    FontSize="15"
+                    WidthRequest="200" 
+                    HeightRequest="60" 
+                    Clicked="ProgressBarButton"/>
+            
+        </StackLayout>
+        
+    </ScrollView>
+
+</ContentPage>
