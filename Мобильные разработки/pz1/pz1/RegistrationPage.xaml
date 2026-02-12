@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="pz1.RegistrationPage"
+             Title="Регистрация">
+
+    <Grid RowSpacing="0" ColumnSpacing="10">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Text="Регистрация"
+               Grid.Row="0"
+               Grid.Column="1"
+               FontSize="28"
+               FontAttributes="Bold"
+               HorizontalTextAlignment="Center"
+               Margin="0,0,0,30"/>
+
+        <Label Text="Ваше имя"
+               Grid.Row="1"
+               Grid.Column="1"
+               FontSize="16"
+               HorizontalTextAlignment="Start"/>
+
+        <Entry x:Name="FirstName"
+               Grid.Row="2"
+               Grid.Column="1"
+               Placeholder="Ваше имя"
+               FontSize="16"
+               HeightRequest="40"
+               WidthRequest="290"/>
+
+        <Label Text="Логин"
+               Grid.Row="3"
+               Grid.Column="1"
+               FontSize="16"
+               HorizontalTextAlignment="Start"
+               Margin="0,20,0,5"/>
+
+        <Entry x:Name="Login"
+               Grid.Row="4"
+               Grid.Column="1"
+               Placeholder="Логин"
+               FontSize="16"
+               HeightRequest="40"
+               WidthRequest="290"/>
+
+        <Label Text="Пароль"
+               Grid.Row="5"
+               Grid.Column="1"
+               FontSize="16"
+               HorizontalTextAlignment="Start"
+               Margin="0,20,0,5"/>
+
+        <Entry x:Name="Password"
+               Grid.Row="6"
+               Grid.Column="1"
+               Placeholder="Пароль"
+               IsPassword="True"
+               FontSize="16"
+               HeightRequest="40"
+               WidthRequest="290"
+               Keyboard="Email"/>
+
+        <Label Text="Пароль ещё раз"
+               Grid.Row="7"
+               Grid.Column="1"
+               FontSize="16"
+               HorizontalTextAlignment="Start"
+               Margin="0,20,0,5"/>
+
+        <Entry x:Name="Password_enother"
+            Grid.Column="1"
+            Grid.Row="8"
+            Placeholder="Пароль ещё раз"
+            IsPassword="True"
+            FontSize="16"
+            HeightRequest="40"
+            WidthRequest="290"/>
+
+        <Button Text="Зарегистрироваться"
+                Grid.Row="9"
+                Grid.Column="1"
+                BackgroundColor="Transparent"
+                TextColor="Black"
+                BorderColor="Black"
+                BorderWidth="1"
+                FontSize="18"
+                HeightRequest="50"
+                WidthRequest="290"
+                Margin="0,30,0,0"
+                CornerRadius="10"
+                Clicked="OnRegisterClicked"/>
+
+        <Button Text="Назад"
+                Grid.Row="11"
+                Grid.Column="1"
+                BackgroundColor="Transparent"
+                TextColor="Black"
+                FontSize="16"
+                HeightRequest="40"
+                Margin="0,20,0,0"
+                Clicked="OnGoBack"/>
+    </Grid>
+</ContentPage>
