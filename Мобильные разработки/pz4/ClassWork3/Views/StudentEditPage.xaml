@@ -55,7 +55,7 @@
         <Grid Grid.Row="8" ColumnDefinitions="*,*" Margin="0,20,0,0">
             <Button Text="Сохранить" 
                     Grid.Column="0" 
-                    BackgroundColor="Green" 
+                    BackgroundColor="BlueViolet" 
                     TextColor="White" 
                     Margin="5" 
                     Clicked="Save_Clicked"/>
