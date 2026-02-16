@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ClassWork3.Views.StudentEditPage"
+             Title="{Binding PageTitle}">
+
+    <Grid Padding="20" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,*">
+
+        <Label Text="Имя студента:" 
+               FontAttributes="Bold" 
+               Margin="0,10,0,5"/>
+        
+        <Entry x:Name="NameEntry"
+               Grid.Row="1" 
+               Placeholder="Введите имя" 
+               Text="{Binding StudentName}"/>
+
+        <Label x:Name="EmailLabel" 
+               Grid.Row="2" 
+               Text="Email:" 
+               FontAttributes="Bold" 
+               Margin="0,15,0,5" 
+               IsVisible="{Binding IsAddMode}"/>
+        
+        <Entry x:Name="EmailEntry" 
+               Grid.Row="3" 
+               Placeholder="Введите email" 
+               Text="{Binding Email}" 
+               IsVisible="{Binding IsAddMode}"/>
+
+        <Label x:Name="PasswordLabel" 
+               Grid.Row="4" 
+               Text="Пароль:" 
+               FontAttributes="Bold" 
+               Margin="0,15,0,5" 
+               IsVisible="{Binding IsAddMode}"/>
+        <Entry x:Name="PasswordEntry" 
+               Grid.Row="5" 
+               Placeholder="Введите пароль" 
+               IsPassword="True" 
+               Text="{Binding Password}" 
+               IsVisible="{Binding IsAddMode}"/>
+
+        <Label x:Name="GroupLabel" 
+               Grid.Row="6" 
+               Text="Группа:" 
+               FontAttributes="Bold" 
+               Margin="0,15,0,5"/>
+        
+        <Entry x:Name="GroupEntry" 
+               Grid.Row="7" 
+               Placeholder="Введите группу" 
+               Text="{Binding GroupName}"/>
+
+        <Grid Grid.Row="8" ColumnDefinitions="*,*" Margin="0,20,0,0">
+            <Button Text="Сохранить" 
+                    Grid.Column="0" 
+                    BackgroundColor="Green" 
+                    TextColor="White" 
+                    Margin="5" 
+                    Clicked="Save_Clicked"/>
+            <Button Text="Отмена" 
+                    Grid.Column="1" 
+                    BackgroundColor="Gray" 
+                    TextColor="White" 
+                    Margin="5" 
+                    Clicked="Cancel_Clicked"/>
+        </Grid>
+
+        <Button x:Name="DeleteButton" 
+                Grid.Row="9" 
+                Text="Удалить" 
+                BackgroundColor="Red" 
+                TextColor="White" 
+                Margin="0,10,0,0" 
+                IsVisible="{Binding IsEditMode}" 
+                Clicked="Delete_Clicked"/>
+    </Grid>
+</ContentPage>

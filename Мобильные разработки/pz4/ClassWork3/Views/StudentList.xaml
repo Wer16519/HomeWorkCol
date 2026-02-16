@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ClassWork3.Views.StudentList">
+
+    <NavigationPage.TitleView>
+        <Label Text="Студенты"
+               TextColor="Black"
+               FontAttributes="Bold"
+               FontSize="30"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"/>
+    </NavigationPage.TitleView>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Добавить" Order="Secondary" Priority="0" Clicked="BtnAdd_Clicked"/>
+        <ToolbarItem Text="О программе" Order="Secondary" Priority="1" Clicked="BtnHelp_Clicked"/>
+    </ContentPage.ToolbarItems>
+
+    <Grid RowDefinitions="*, Auto" Padding="10" BackgroundColor="White">
+        <StackLayout>
+            <Border Margin="10">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10"/>
+                </Border.StrokeShape>
+                <SearchBar x:Name="SearchBar1"
+                           TextColor="Black"
+                           SearchIconColor="Black"
+                           Placeholder="Поиск..."
+                           TextChanged="SearchBar1_TextChanged"/>
+            </Border>
+
+            <RefreshView x:Name="Refresh" 
+                         Refreshing="Refresh_Refreshing"
+                         RefreshColor="Black">
+                <CollectionView x:Name="Collection1" SelectionMode="Single" SelectionChanged="OnStudentTapped">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Padding="10"
+                                  ColumnDefinitions="Auto, Auto"
+                                  RowDefinitions="*,*,*">
+                                <Image Grid.RowSpan="3"
+                                       Source="{Binding Photo}"
+                                       WidthRequest="80"
+                                       HeightRequest="80"/>
+
+                                <Label Grid.Column="1"
+                                       Text="{Binding UserName}"
+                                       TextColor="Black"
+                                       FontSize="20"
+                                       FontAttributes="Bold"/>
+                                <Label Grid.Column="1"
+                                       Grid.Row="1"
+                                       Text="{Binding Email}"
+                                       TextColor="Gray"
+                                       FontSize="18"
+                                       FontAttributes="Bold"/>
+                                <Label Grid.Column="1"
+                                       Grid.Row="2"
+                                       Text="{Binding GroupName}"
+                                       TextColor="Black"
+                                       FontSize="20"
+                                       FontAttributes="Bold"/>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </RefreshView>
+        </StackLayout>
+        <Label x:Name="StatusLabel" Grid.Row="1" TextColor="Gray"/>
+    </Grid>
+</ContentPage>
