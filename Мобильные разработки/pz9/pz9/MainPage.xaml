@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="pz9.MainPage"
+             Title="Математическая игра">
+
+    <StackLayout>
+        <Label Text="Сложение чисел"
+               HorizontalTextAlignment="Center"
+               Padding="0,50,0,50"
+               FontSize="32"
+               FontAttributes="Bold"/>
+
+        <Border StrokeThickness="2"
+                Stroke="Transparent"
+                Padding="10">
+            <ProgressBar x:Name="timeProgressBar" 
+                         Progress="1.0" 
+                         HeightRequest="20"/>
+        </Border>
+
+        <Label Text=""
+               HorizontalOptions="Center"
+               x:Name="TimerText" 
+               Padding="10"/>
+
+        <Label Text="Z + OV = ?"
+               HorizontalOptions="Center"
+               Padding="10"
+               FontAttributes="Bold"
+               TextColor="#512BD4"
+               FontSize="52"
+               x:Name="ExampleLabel"/>
+
+        <Border Padding="30" Stroke="Transparent">
+            <Entry WidthRequest="400" 
+                   x:Name="AnswerEntry"
+                   Placeholder="Введите ответ"/>
+        </Border>
+
+        <Button Text="Проверить"
+                WidthRequest="200"
+                Clicked="CheckButton_Clicked"
+                x:Name="CheckButton"
+                Padding="10"/>
+
+        <Label Text=""
+               HorizontalOptions="Center"
+               x:Name="ResultLabel"
+               Padding="10"/>
+
+        <Label Text="Счет: 0"
+               HorizontalOptions="Center"
+               x:Name="ScoreLabel"
+               Padding="10"/>
+
+        <Button Text="Новая игра"
+                WidthRequest="200"
+                Clicked="NewGameButton_Clicked"
+                x:Name="NewGameButton"
+                Padding="10"/>
+
+    </StackLayout>
+
+</ContentPage>
