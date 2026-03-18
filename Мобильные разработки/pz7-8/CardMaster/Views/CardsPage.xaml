@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CardMaster.Views.CardsPage"
+             Title="Карты">
+
+    <StackLayout Padding="10">
+        <Border>
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="20"/>
+            </Border.StrokeShape>
+            <SearchBar x:Name="searchBar"
+                       Placeholder="Поиск..."
+                       TextChanged="searchBar_TextChanged"/>
+        </Border>
+
+        <RefreshView x:Name="Refresh"
+                     Refreshing="Refresh_Refreshing">
+
+            <CollectionView x:Name="ColletctionView"
+                            SelectionMode="Single"
+                            SelectionChanged="ColletctionView_SelectionChanged"
+                            ItemsLayout="VerticalGrid, 2">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="8">
+                            <Border>
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="10"/>
+                                </Border.StrokeShape>
+                                <Image Source="{Binding Image}"/>
+                            </Border>
+                            <Label HorizontalOptions="Center"
+                                   FontSize="20"
+                                   FontAttributes="Bold"
+                                   Text="{Binding Name}"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </RefreshView>
+
+        <!-- КНОПКА ДОБАВЛЕНИЯ КАРТЫ -->
+        <Button Text="+ Добавить карту"
+                CornerRadius="20"
+                BackgroundColor="Green"
+                TextColor="White"
+                Margin="10"
+                Clicked="AddButton_Clicked"/>
+    </StackLayout>
+
+</ContentPage>

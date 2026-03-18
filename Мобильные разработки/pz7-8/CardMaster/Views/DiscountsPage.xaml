@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CardMaster.Views.DiscountsPage"
+             Title="Скидки">
+
+    <StackLayout Padding="10">
+        <Border>
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="20"/>
+            </Border.StrokeShape>
+            <SearchBar x:Name="searchBar"
+                       Placeholder="Поиск скидок..."
+                       TextChanged="searchBar_TextChanged"/>
+        </Border>
+
+        <RefreshView x:Name="Refresh"
+                     Refreshing="Refresh_Refreshing">
+
+            <CollectionView x:Name="DiscountsCollectionView"
+                            SelectionMode="Single"
+                            SelectionChanged="DiscountsCollectionView_SelectionChanged">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border Margin="5">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="10"/>
+                            </Border.StrokeShape>
+                            <Grid Padding="10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="80"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Image Grid.Column="0"
+                                       Source="{Binding Image}"
+                                       WidthRequest="60"
+                                       HeightRequest="60"/>
+
+                                <StackLayout Grid.Column="1"
+                                             VerticalOptions="Center">
+                                    <Label Text="{Binding Name}"
+                                           FontSize="18"
+                                           FontAttributes="Bold"/>
+                                    <Label Text="{Binding Description}"
+                                           FontSize="14"
+                                           TextColor="Gray"/>
+                                </StackLayout>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </RefreshView>
+
+        <!-- КНОПКА ДОБАВЛЕНИЯ СКИДКИ -->
+        <Button Text="+ Добавить скидку"
+                CornerRadius="20"
+                BackgroundColor="Green"
+                TextColor="White"
+                Margin="10"
+                Clicked="AddButton_Clicked"/>
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CardMaster.Views.DiscountDetailPage"
+             Title="DiscountDetailPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0"
+                Margin="10"
+                StrokeThickness="1"
+                Stroke="Gray">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="10"/>
+            </Border.StrokeShape>
+            <Label x:Name="TitleLabel"
+                   Text="Название магазина"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   Padding="20"/>
+        </Border>
+
+        <StackLayout Grid.Row="1"
+                     Padding="20"
+                     Spacing="20">
+
+            <Border StrokeThickness="1"
+                    Stroke="Gray">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10"/>
+                </Border.StrokeShape>
+                <Image x:Name="DiscountImage"
+                       Source="discount.png"
+                       WidthRequest="200"
+                       HeightRequest="200"
+                       HorizontalOptions="Center"/>
+            </Border>
+
+            <Border StrokeThickness="1"
+                    Stroke="Gray">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10"/>
+                </Border.StrokeShape>
+                <StackLayout Padding="15">
+                    <Label Text="Описание:"
+                           FontAttributes="Bold"
+                           FontSize="16"/>
+                    <Label x:Name="DescriptionLabel"
+                           FontSize="14"/>
+                </StackLayout>
+            </Border>
+
+            <Border StrokeThickness="1"
+                    Stroke="Gray">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10"/>
+                </Border.StrokeShape>
+                <StackLayout Padding="15">
+                    <Label Text="Промокод:"
+                           FontAttributes="Bold"
+                           FontSize="16"/>
+                    <Label x:Name="PromocodeLabel"
+                           FontSize="18"
+                           TextColor="Green"/>
+                </StackLayout>
+            </Border>
+        </StackLayout>
+
+        <Button Grid.Row="2"
+                Text="Копировать промокод"
+                CornerRadius="20"
+                Margin="20"
+                BackgroundColor="Blue"
+                TextColor="White"
+                Clicked="CopyButton_Clicked"/>
+    </Grid>
+
+</ContentPage>

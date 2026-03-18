@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CardMaster.Views.SettingsPage"
+             Title="Настройки">
+
+    <StackLayout Padding="20" Spacing="20">
+        <Label Text="Настройки приложения"
+               FontSize="24"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"/>
+
+        <Border StrokeThickness="1"
+                Stroke="Gray">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="10"/>
+            </Border.StrokeShape>
+            <StackLayout Padding="15" Spacing="10">
+                <Label Text="Статистика"
+                       FontSize="18"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"/>
+
+                <StackLayout Orientation="Horizontal"
+                             HorizontalOptions="Center">
+                    <Label Text="Всего карт: "
+                           FontSize="16"/>
+                    <Label x:Name="TotalCardsLabel"
+                           Text="0"
+                           FontSize="16"
+                           FontAttributes="Bold"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal"
+                             HorizontalOptions="Center">
+                    <Label Text="Всего скидок: "
+                           FontSize="16"/>
+                    <Label x:Name="TotalDiscountsLabel"
+                           Text="0"
+                           FontSize="16"
+                           FontAttributes="Bold"/>
+                </StackLayout>
+            </StackLayout>
+        </Border>
+
+        <Border StrokeThickness="1"
+                Stroke="Gray">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="10"/>
+            </Border.StrokeShape>
+            <StackLayout Padding="15" Spacing="10">
+                <Label Text="Тема оформления"
+                       FontSize="18"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"/>
+
+                <StackLayout Orientation="Horizontal"
+                             HorizontalOptions="Center"
+                             Spacing="20">
+                    <Label Text="Тёмная тема"
+                           FontSize="16"
+                           VerticalOptions="Center"/>
+                    <Switch x:Name="ThemeSwitch"
+                            Toggled="ThemeSwitch_Toggled"/>
+                </StackLayout>
+            </StackLayout>
+        </Border>
+    </StackLayout>
+
+</ContentPage>

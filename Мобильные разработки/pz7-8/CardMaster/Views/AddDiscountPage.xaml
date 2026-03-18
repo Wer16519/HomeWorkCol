@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CardMaster.Views.AddDiscountPage"
+             Title="AddDiscountPage">
+
+    <StackLayout Padding="20" Spacing="15">
+        <Label Text="Добавление новой скидки"
+               FontSize="24"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"/>
+
+        <Border>
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="10"/>
+            </Border.StrokeShape>
+            <StackLayout Padding="10">
+                <Label Text="Название магазина:" FontAttributes="Bold"/>
+                <Entry x:Name="NameEntry" Placeholder="Введите название"/>
+            </StackLayout>
+        </Border>
+
+        <Border>
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="10"/>
+            </Border.StrokeShape>
+            <StackLayout Padding="10">
+                <Label Text="Промокод:" FontAttributes="Bold"/>
+                <Entry x:Name="PromocodeEntry" Placeholder="Введите промокод"/>
+            </StackLayout>
+        </Border>
+
+        <Border>
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="10"/>
+            </Border.StrokeShape>
+            <StackLayout Padding="10">
+                <Label Text="Описание:" FontAttributes="Bold"/>
+                <Editor x:Name="DescriptionEditor"
+                        Placeholder="Введите описание скидки"
+                        HeightRequest="100"/>
+            </StackLayout>
+        </Border>
+
+        <Button Text="Сохранить скидку"
+                CornerRadius="20"
+                BackgroundColor="Green"
+                TextColor="White"
+                Clicked="SaveButton_Clicked"/>
+    </StackLayout>
+
+</ContentPage>
