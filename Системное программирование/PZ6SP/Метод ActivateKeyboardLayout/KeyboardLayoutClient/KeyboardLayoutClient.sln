@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36518.9 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeyboardLayoutClient", "KeyboardLayoutClient\KeyboardLayoutClient.csproj", "{B610DD30-BF3E-47D3-918B-92D88124DD9E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B610DD30-BF3E-47D3-918B-92D88124DD9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B610DD30-BF3E-47D3-918B-92D88124DD9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B610DD30-BF3E-47D3-918B-92D88124DD9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B610DD30-BF3E-47D3-918B-92D88124DD9E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5BE9A10A-6FA7-4178-B30F-B384F4FE046A}
+	EndGlobalSection
+EndGlobal
