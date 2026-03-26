@@ -1,0 +1,14 @@
+C:\Users\estuk\OneDrive\Desktop\СиСи\PZ19\PZ19\PZ19\bin\Debug\net10.0\PZ19.exe
+C:\Users\estuk\OneDrive\Desktop\СиСи\PZ19\PZ19\PZ19\bin\Debug\net10.0\PZ19.deps.json
+C:\Users\estuk\OneDrive\Desktop\СиСи\PZ19\PZ19\PZ19\bin\Debug\net10.0\PZ19.runtimeconfig.json
+C:\Users\estuk\OneDrive\Desktop\СиСи\PZ19\PZ19\PZ19\bin\Debug\net10.0\PZ19.dll
+C:\Users\estuk\OneDrive\Desktop\СиСи\PZ19\PZ19\PZ19\bin\Debug\net10.0\PZ19.pdb
+C:\Users\estuk\OneDrive\Desktop\СиСи\PZ19\PZ19\PZ19\obj\Debug\net10.0\PZ19.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\estuk\OneDrive\Desktop\СиСи\PZ19\PZ19\PZ19\obj\Debug\net10.0\PZ19.AssemblyInfoInputs.cache
+C:\Users\estuk\OneDrive\Desktop\СиСи\PZ19\PZ19\PZ19\obj\Debug\net10.0\PZ19.AssemblyInfo.cs
+C:\Users\estuk\OneDrive\Desktop\СиСи\PZ19\PZ19\PZ19\obj\Debug\net10.0\PZ19.csproj.CoreCompileInputs.cache
+C:\Users\estuk\OneDrive\Desktop\СиСи\PZ19\PZ19\PZ19\obj\Debug\net10.0\PZ19.dll
+C:\Users\estuk\OneDrive\Desktop\СиСи\PZ19\PZ19\PZ19\obj\Debug\net10.0\refint\PZ19.dll
+C:\Users\estuk\OneDrive\Desktop\СиСи\PZ19\PZ19\PZ19\obj\Debug\net10.0\PZ19.pdb
+C:\Users\estuk\OneDrive\Desktop\СиСи\PZ19\PZ19\PZ19\obj\Debug\net10.0\PZ19.genruntimeconfig.cache
+C:\Users\estuk\OneDrive\Desktop\СиСи\PZ19\PZ19\PZ19\obj\Debug\net10.0\ref\PZ19.dll

@@ -1,0 +1,14 @@
+C:\Users\Professional\Desktop\pz18\pz18\bin\Debug\net10.0\pz18.exe
+C:\Users\Professional\Desktop\pz18\pz18\bin\Debug\net10.0\pz18.deps.json
+C:\Users\Professional\Desktop\pz18\pz18\bin\Debug\net10.0\pz18.runtimeconfig.json
+C:\Users\Professional\Desktop\pz18\pz18\bin\Debug\net10.0\pz18.dll
+C:\Users\Professional\Desktop\pz18\pz18\bin\Debug\net10.0\pz18.pdb
+C:\Users\Professional\Desktop\pz18\pz18\obj\Debug\net10.0\pz18.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Professional\Desktop\pz18\pz18\obj\Debug\net10.0\pz18.AssemblyInfoInputs.cache
+C:\Users\Professional\Desktop\pz18\pz18\obj\Debug\net10.0\pz18.AssemblyInfo.cs
+C:\Users\Professional\Desktop\pz18\pz18\obj\Debug\net10.0\pz18.csproj.CoreCompileInputs.cache
+C:\Users\Professional\Desktop\pz18\pz18\obj\Debug\net10.0\pz18.dll
+C:\Users\Professional\Desktop\pz18\pz18\obj\Debug\net10.0\refint\pz18.dll
+C:\Users\Professional\Desktop\pz18\pz18\obj\Debug\net10.0\pz18.pdb
+C:\Users\Professional\Desktop\pz18\pz18\obj\Debug\net10.0\pz18.genruntimeconfig.cache
+C:\Users\Professional\Desktop\pz18\pz18\obj\Debug\net10.0\ref\pz18.dll
