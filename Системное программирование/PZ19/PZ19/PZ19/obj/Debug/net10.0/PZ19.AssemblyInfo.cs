@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PZ19")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cffea8f9b0a43a038c563e1bfae1ae331c36dce2")]
 [assembly: System.Reflection.AssemblyProductAttribute("PZ19")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PZ19")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
