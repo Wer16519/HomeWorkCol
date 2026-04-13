@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="pz10.Views.HomePage"
+             Title="Главная"
+             BackgroundColor="#F0F0F0">
+    <ScrollView>
+        <VerticalStackLayout Spacing="0">
+
+            <Image Source="home_header.jpg" Aspect="AspectFill" HeightRequest="280"/>
+
+            <Label Text="Специальные предложения" FontSize="26" FontAttributes="Bold" Margin="60,25,0,15"/>
+
+            <FlexLayout Direction="Row"
+                        Wrap="Wrap"
+                        JustifyContent="SpaceAround"
+                        AlignItems="Start"
+                        AlignContent="Start"
+                        Padding="12,0,12,12">
+
+                <Border StrokeThickness="0" WidthRequest="185" HeightRequest="270" Margin="6">
+                    <VerticalStackLayout>
+                        <Image Source="beautiful.jpg" Aspect="AspectFill" HeightRequest="135"/>
+                        <VerticalStackLayout Padding="12" Spacing="6" BackgroundColor="White">
+                            <Label Text="Море" FontSize="20" FontAttributes="Bold"/>
+                            <Label Text="Крым, Азов" FontSize="15" TextColor="#888888"/>
+                            <Border BackgroundColor="#FF4500" Padding="12,6" HorizontalOptions="Start" Margin="0,8,0,0">
+                                <Label Text="Горящие туры" FontSize="13" TextColor="White"/>
+                            </Border>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </Border>
+
+                <Border StrokeThickness="0" WidthRequest="185" HeightRequest="270" Margin="6">
+                    <VerticalStackLayout>
+                        <Image Source="mountain_card.jpg" Aspect="AspectFill" HeightRequest="135"/>
+                        <VerticalStackLayout Padding="12" Spacing="6" BackgroundColor="White">
+                            <Label Text="Горы" FontSize="20" FontAttributes="Bold"/>
+                            <Label Text="Урал, Дагестан" FontSize="15" TextColor="#888888"/>
+                            <Border BackgroundColor="#2E8B57" Padding="12,6" HorizontalOptions="Start" Margin="0,8,0,0">
+                                <Label Text="Выбор клиентов" FontSize="13" TextColor="White"/>
+                            </Border>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </Border>
+
+                <Border StrokeThickness="0" WidthRequest="185" HeightRequest="270" Margin="6">
+                    <VerticalStackLayout>
+                        <Image Source="camping_card.jpg" Aspect="AspectFill" HeightRequest="135"/>
+                        <VerticalStackLayout Padding="12" Spacing="6" BackgroundColor="White">
+                            <Label Text="Кемпинг" FontSize="20" FontAttributes="Bold"/>
+                            <Label Text="Прибайкалье, Усурийск" FontSize="15" TextColor="#888888"/>
+                            <Border BackgroundColor="#1E90FF" Padding="12,6" HorizontalOptions="Start" Margin="0,8,0,0">
+                                <Label Text="Семейный отдых" FontSize="13" TextColor="White"/>
+                            </Border>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </Border>
+
+                <Border StrokeThickness="0" WidthRequest="185" HeightRequest="270" Margin="6">
+                    <VerticalStackLayout>
+                        <Image Source="safari_card.jpg" Aspect="AspectFill" HeightRequest="135"/>
+                        <VerticalStackLayout Padding="12" Spacing="6" BackgroundColor="White">
+                            <Label Text="Сафари" FontSize="20" FontAttributes="Bold"/>
+                            <Label Text="Дагестан, Карелия" FontSize="15" TextColor="#888888"/>
+                            <Border BackgroundColor="#FF8C00" Padding="12,6" HorizontalOptions="Start" Margin="0,8,0,0">
+                                <Label Text="Экстремальный отдых" FontSize="13" TextColor="White"/>
+                            </Border>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </Border>
+
+            </FlexLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

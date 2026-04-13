@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="pz10.Views.ToursPage"
+             Title="Туры"
+             BackgroundColor="LightGray">
+    <ScrollView>
+        <VerticalStackLayout Padding="15" Spacing="15">
+            <Label Text="Популярные направления" FontSize="22" FontAttributes="Bold" Margin="0,0,0,10"/>
+
+            <CollectionView x:Name="ToursCollectionView">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border>
+                            <Grid ColumnDefinitions="100,*" Padding="10" ColumnSpacing="15" BackgroundColor="White">
+                                <Border Grid.Column="0" StrokeThickness="0" HeightRequest="90" WidthRequest="90">
+                                    <Image Source="{Binding ImageSource}" Aspect="AspectFill"/>
+                                </Border>
+                                <VerticalStackLayout Grid.Column="1" Spacing="5" VerticalOptions="Center">
+                                    <Label Text="{Binding Title}" FontSize="16" FontAttributes="Bold" LineBreakMode="TailTruncation"/>
+                                    <HorizontalStackLayout Spacing="5">
+                                        <Label Text="⚲" FontSize="14" TextColor="Gray" VerticalOptions="Center"/>
+                                        <Label Text="{Binding Location}" FontSize="14" TextColor="Gray" VerticalOptions="Center"/>
+                                    </HorizontalStackLayout>
+                                    <HorizontalStackLayout Spacing="5">
+                                        <Label Text="🗓" FontSize="14" TextColor="Gray" VerticalOptions="Center"/>
+                                        <Label Text="{Binding Date}" FontSize="14" TextColor="Gray" VerticalOptions="Center"/>
+                                    </HorizontalStackLayout>
+                                </VerticalStackLayout>
+                            </Grid>
+
+                            <Border.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnTourTapped" CommandParameter="{Binding .}"/>
+                            </Border.GestureRecognizers>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
