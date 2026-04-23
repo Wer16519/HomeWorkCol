@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="pz10.Views.DetailToursPage"
              Title="Детали тура"
-             BackgroundColor="#E8E8E8">
+             BackgroundColor="#F0F0F0">
     <ScrollView>
         <VerticalStackLayout Padding="15" Spacing="15">
 

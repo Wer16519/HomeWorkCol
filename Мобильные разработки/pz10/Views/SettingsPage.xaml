@@ -3,9 +3,159 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="pz10.Views.SettingsPage"
              Title="Настройки"
-             BackgroundColor="White">
-    <VerticalStackLayout Padding="20" Spacing="15" VerticalOptions="Center">
-        <Label Text="Настройки" FontSize="28" FontAttributes="Bold" HorizontalOptions="Center"/>
-        <Label Text="Здесь будут располагаться настройки приложения." FontSize="16" TextColor="Gray" HorizontalOptions="Center"/>
-    </VerticalStackLayout>
+             Background="#F0F0F0">
+
+    <ContentPage.Resources>
+        <Color x:Key="CardColor">White</Color>
+        <Color x:Key="BorderColor">#F0F0F0</Color>
+        <Color x:Key="PrimaryAccent">#8B5CF6</Color>
+        <Color x:Key="SecondaryAccent">#F472B6</Color>
+        <Color x:Key="TextMain">#000000</Color>
+        <Color x:Key="TextMuted">#6B7280</Color>
+        <Color x:Key="ChartTrack">#ffff00</Color>
+        <Color x:Key="PositiveColor">#10B981</Color>
+        <Color x:Key="NegativeColor">#EF4444</Color>
+        <Color x:Key="ProgressTrackColor">#E5E7EB</Color>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <HorizontalStackLayout Spacing="12">
+                <Image Source="avatar.png"
+                       WidthRequest="50"
+                       HeightRequest="50"
+                       Aspect="AspectFill"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"/>
+
+                <VerticalStackLayout Spacing="4" VerticalOptions="Center">
+                    <Label Text="Доброе утро," TextColor="{StaticResource TextMuted}" FontSize="14"/>
+                    <Label Text="Администратор" TextColor="{StaticResource TextMain}" FontSize="22" FontAttributes="Bold"/>
+                </VerticalStackLayout>
+            </HorizontalStackLayout>
+
+            <Grid ColumnDefinitions="1.5*, 1.5*" ColumnSpacing="16">
+                <Border Grid.Column="0"
+                        BackgroundColor="{StaticResource CardColor}"
+                        StrokeShape="RoundRectangle 16"
+                        StrokeThickness="0"
+                        Padding="16">
+                    <Border.Shadow>
+                        <Shadow Brush="Black" Offset="0,2" Radius="4" Opacity="0.05"/>
+                    </Border.Shadow>
+                    <VerticalStackLayout Spacing="8">
+                        <Label Text="Доход" TextColor="{StaticResource TextMuted}" FontSize="14"/>
+                        <Label Text="₽15,890" TextColor="{StaticResource TextMain}" FontSize="24" FontAttributes="Bold"/>
+                        <HorizontalStackLayout Spacing="4">
+                            <Label Text="+1.4%" TextColor="{StaticResource PositiveColor}" FontSize="12"/>
+                            <Label Text="за месяц" TextColor="{StaticResource TextMuted}" FontSize="12"/>
+                        </HorizontalStackLayout>
+                    </VerticalStackLayout>
+                </Border>
+
+                <Border Grid.Column="1"
+                        BackgroundColor="{StaticResource CardColor}"
+                        StrokeShape="RoundRectangle 16"
+                        StrokeThickness="0"
+                        Padding="16">
+                    <Border.Shadow>
+                        <Shadow Brush="Black" Offset="0,2" Radius="4" Opacity="0.05"/>
+                    </Border.Shadow>
+                    <VerticalStackLayout Spacing="8">
+                        <Label Text="Активность" TextColor="{StaticResource TextMuted}" FontSize="14"/>
+                        <Label Text="9,450" TextColor="{StaticResource TextMain}" FontSize="24" FontAttributes="Bold"/>
+                        <HorizontalStackLayout Spacing="4">
+                            <Label Text="-2%" TextColor="{StaticResource NegativeColor}" FontSize="12"/>
+                            <Label Text="за неделю" TextColor="{StaticResource TextMuted}" FontSize="12"/>
+                        </HorizontalStackLayout>
+                    </VerticalStackLayout>
+                </Border>
+            </Grid>
+
+            <Border BackgroundColor="{StaticResource CardColor}"
+                    StrokeShape="RoundRectangle 20"
+                    StrokeThickness="1"
+                    Stroke="{StaticResource BorderColor}"
+                    Padding="16">
+                <VerticalStackLayout Spacing="16">
+                    <Grid ColumnDefinitions="*, Auto">
+                        <Label Grid.Column="0" Text="Аналитика просмотров" FontSize="16" FontAttributes="Bold" TextColor="{StaticResource TextMain}"/>
+                        <Label Grid.Column="1" Text="Эта неделя" FontSize="12" TextColor="{StaticResource TextMuted}"/>
+                    </Grid>
+
+                    <Grid HeightRequest="160" ColumnDefinitions="*,*,*,*,*,*,*" ColumnSpacing="8" VerticalOptions="End">
+                        <VerticalStackLayout Grid.Column="0" Spacing="4" VerticalOptions="End">
+                            <RoundRectangle Fill="{StaticResource PrimaryAccent}" CornerRadius="6,6,0,6" HeightRequest="40" VerticalOptions="End"/>
+                            <Label Text="Пн" FontSize="10" HorizontalOptions="Center" TextColor="{StaticResource TextMuted}"/>
+                        </VerticalStackLayout>
+                        <VerticalStackLayout Grid.Column="1" Spacing="4" VerticalOptions="End">
+                            <RoundRectangle Fill="{StaticResource PrimaryAccent}" CornerRadius="6,6,0,6" HeightRequest="80" VerticalOptions="End"/>
+                            <Label Text="Вт" FontSize="10" HorizontalOptions="Center" TextColor="{StaticResource TextMuted}"/>
+                        </VerticalStackLayout>
+                        <VerticalStackLayout Grid.Column="2" Spacing="4" VerticalOptions="End">
+                            <RoundRectangle Fill="{StaticResource SecondaryAccent}" CornerRadius="6,6,0,6" HeightRequest="140" VerticalOptions="End"/>
+                            <Label Text="Ср" FontSize="10" HorizontalOptions="Center" TextColor="{StaticResource TextMain}"/>
+                        </VerticalStackLayout>
+                        <VerticalStackLayout Grid.Column="3" Spacing="4" VerticalOptions="End">
+                            <RoundRectangle Fill="{StaticResource PrimaryAccent}" CornerRadius="6,6,0,6" HeightRequest="60" VerticalOptions="End"/>
+                            <Label Text="Чт" FontSize="10" HorizontalOptions="Center" TextColor="{StaticResource TextMuted}"/>
+                        </VerticalStackLayout>
+                        <VerticalStackLayout Grid.Column="4" Spacing="4" VerticalOptions="End">
+                            <RoundRectangle Fill="{StaticResource PrimaryAccent}" CornerRadius="6,6,0,6" HeightRequest="120" VerticalOptions="End"/>
+                            <Label Text="Пт" FontSize="10" HorizontalOptions="Center" TextColor="{StaticResource TextMuted}"/>
+                        </VerticalStackLayout>
+                        <VerticalStackLayout Grid.Column="5" Spacing="4" VerticalOptions="End">
+                            <RoundRectangle Fill="{StaticResource PrimaryAccent}" CornerRadius="6,6,0,6" HeightRequest="30" VerticalOptions="End"/>
+                            <Label Text="Сб" FontSize="10" HorizontalOptions="Center" TextColor="{StaticResource TextMuted}"/>
+                        </VerticalStackLayout>
+                        <VerticalStackLayout Grid.Column="6" Spacing="4" VerticalOptions="End">
+                            <RoundRectangle Fill="{StaticResource PrimaryAccent}" CornerRadius="6,6,0,6" HeightRequest="70" VerticalOptions="End"/>
+                            <Label Text="Вс" FontSize="10" HorizontalOptions="Center" TextColor="{StaticResource TextMuted}"/>
+                        </VerticalStackLayout>
+                    </Grid>
+                </VerticalStackLayout>
+            </Border>
+
+            <Border BackgroundColor="{StaticResource CardColor}"
+                    StrokeShape="RoundRectangle 20"
+                    StrokeThickness="1"
+                    Stroke="{StaticResource BorderColor}"
+                    Padding="20">
+                <VerticalStackLayout Spacing="20">
+                    <Label Text="Источники трафика" FontSize="16" FontAttributes="Bold" TextColor="{StaticResource TextMain}"/>
+
+                    <VerticalStackLayout Spacing="8">
+                        <Grid ColumnDefinitions="*, Auto">
+                            <Label Text="Органический поиск" TextColor="{StaticResource TextMain}" FontSize="14"/>
+                            <Label Grid.Column="1" Text="75%" TextColor="{StaticResource TextMain}" FontSize="14" FontAttributes="Bold"/>
+                        </Grid>
+                        <ProgressBar Progress="0.75" HeightRequest="8" 
+                                     BackgroundColor="{StaticResource ProgressTrackColor}"
+                                     ProgressColor="{StaticResource PrimaryAccent}"/>
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout Spacing="8">
+                        <Grid ColumnDefinitions="*, Auto">
+                            <Label Text="Социальные сети" TextColor="{StaticResource TextMain}" FontSize="14"/>
+                            <Label Grid.Column="1" Text="15%" TextColor="{StaticResource TextMain}" FontSize="14" FontAttributes="Bold"/>
+                        </Grid>
+                        <ProgressBar Progress="0.15" HeightRequest="8" 
+                                     BackgroundColor="{StaticResource ProgressTrackColor}"
+                                     ProgressColor="{StaticResource SecondaryAccent}"/>
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout Spacing="8">
+                        <Grid ColumnDefinitions="*, Auto">
+                            <Label Text="Прямые переходы" TextColor="{StaticResource TextMain}" FontSize="14"/>
+                            <Label Grid.Column="1" Text="10%" TextColor="{StaticResource TextMain}" FontSize="14" FontAttributes="Bold"/>
+                        </Grid>
+                        <ProgressBar Progress="0.10" HeightRequest="8" 
+                                     BackgroundColor="{StaticResource ProgressTrackColor}"
+                                     ProgressColor="{StaticResource ChartTrack}"/>
+                    </VerticalStackLayout>
+                </VerticalStackLayout>
+            </Border>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

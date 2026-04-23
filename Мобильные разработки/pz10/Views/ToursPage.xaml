@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="pz10.Views.ToursPage"
              Title="Туры"
-             BackgroundColor="LightGray">
+             BackgroundColor="#F0F0F0">
     <ScrollView>
         <VerticalStackLayout Padding="15" Spacing="15">
             <Label Text="Популярные направления" FontSize="22" FontAttributes="Bold" Margin="0,0,0,10"/>
