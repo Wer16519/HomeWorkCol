@@ -1,0 +1,47 @@
+﻿<Window x:Class="t5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Form1" Height="400" Width="600">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Кнопки">
+                <MenuItem Header="Сгенерировать button">
+                    <MenuItem Header="1" Click="GenButton_Click"/>
+                    <MenuItem Header="2" Click="GenButton_Click"/>
+                    <MenuItem Header="3" Click="GenButton_Click"/>
+                    <MenuItem Header="4" Click="GenButton_Click"/>
+                    <MenuItem Header="5" Click="GenButton_Click"/>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="Метки">
+                <MenuItem Header="Сгенерировать label">
+                    <MenuItem Header="1" Click="GenLabel_Click"/>
+                    <MenuItem Header="2" Click="GenLabel_Click"/>
+                    <MenuItem Header="3" Click="GenLabel_Click"/>
+                    <MenuItem Header="4" Click="GenLabel_Click"/>
+                    <MenuItem Header="5" Click="GenLabel_Click"/>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="Текстовые поля">
+                <MenuItem Header="Сгенерировать textBox">
+                    <MenuItem Header="1" Click="GenTextBox_Click"/>
+                    <MenuItem Header="2" Click="GenTextBox_Click"/>
+                    <MenuItem Header="3" Click="GenTextBox_Click"/>
+                    <MenuItem Header="4" Click="GenTextBox_Click"/>
+                    <MenuItem Header="5" Click="GenTextBox_Click"/>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="Списки">
+                <MenuItem Header="Сгенерировать listBox">
+                    <MenuItem Header="1" Click="GenListBox_Click"/>
+                    <MenuItem Header="2" Click="GenListBox_Click"/>
+                    <MenuItem Header="3" Click="GenListBox_Click"/>
+                    <MenuItem Header="4" Click="GenListBox_Click"/>
+                    <MenuItem Header="5" Click="GenListBox_Click"/>
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+
+        <Canvas x:Name="mainCanvas" Background="White"/>
+    </DockPanel>
+</Window>

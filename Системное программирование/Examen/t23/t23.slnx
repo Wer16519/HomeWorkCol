@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="t23/t23.csproj" />
+  <Project Path="t23_prog/t23_prog.csproj" />
+</Solution>

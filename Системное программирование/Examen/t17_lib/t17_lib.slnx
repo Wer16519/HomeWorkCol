@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="t17/t17.csproj" />
+  <Project Path="t17_lib/t17_lib.csproj" />
+</Solution>

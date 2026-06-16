@@ -1,0 +1,43 @@
+﻿<Window x:Class="t13.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Form1" Height="450" Width="700">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" Margin="10">
+            <Button Content="Нарисовать" Height="25" Margin="0,0,0,15" Click="Draw_Click"/>
+
+            <StackPanel Orientation="Horizontal" Margin="0,5">
+                <Label Content="Цвет" Width="70"/>
+                <ComboBox x:Name="cbColor" Width="100">
+                    <ComboBoxItem Content="Красный"/>
+                    <ComboBoxItem Content="Зелёный"/>
+                    <ComboBoxItem Content="Синий"/>
+                    <ComboBoxItem Content="Жёлтый"/>
+                    <ComboBoxItem Content="Чёрный"/>
+                </ComboBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,5">
+                <Label Content="Кол-во" Width="70"/>
+                <TextBox x:Name="tbCount" Width="100"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,5">
+                <Label Content="Сторона A" Width="70"/>
+                <TextBox x:Name="tbA" Width="100"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,5">
+                <Label Content="Сторона B" Width="70"/>
+                <TextBox x:Name="tbB" Width="100"/>
+            </StackPanel>
+        </StackPanel>
+
+        <Canvas x:Name="canvas" Grid.Column="1" Background="White"/>
+    </Grid>
+</Window>
