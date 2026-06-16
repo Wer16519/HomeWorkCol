@@ -1,0 +1,31 @@
+﻿<Window x:Class="Task45_ClipboardManager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Буфер обмена" Height="500" Width="700"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <WrapPanel Grid.Row="0" Margin="0,0,0,10">
+            <Button x:Name="BtnCopy" Content="Копировать в буфер" Width="150" Height="30" Margin="0,0,10,0" Click="BtnCopy_Click"/>
+            <Button x:Name="BtnPaste" Content="Вставить из буфера" Width="150" Height="30" Margin="0,0,10,0" Click="BtnPaste_Click"/>
+            <Button x:Name="BtnCheck" Content="Проверить текст" Width="130" Height="30" Margin="0,0,10,0" Click="BtnCheck_Click"/>
+            <Button x:Name="BtnClear" Content="Очистить буфер" Width="130" Height="30" Margin="0,0,10,0" Click="BtnClear_Click"/>
+            <Button x:Name="BtnFormat" Content="Форматированный текст" Width="160" Height="30" Click="BtnFormat_Click"/>
+        </WrapPanel>
+
+        <Label Grid.Row="1" Content="Введите текст:" Margin="0,0,0,5"/>
+        <TextBox x:Name="TxtInput" Grid.Row="2" TextWrapping="Wrap" AcceptsReturn="True" 
+                 VerticalScrollBarVisibility="Auto" Margin="0,0,0,10" FontSize="14"/>
+
+        <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="0,5,0,0">
+            <Label x:Name="LblStatus" Content="Готов" Width="500" Height="25"/>
+            <Label x:Name="LblInfo" Content="Буфер: пуст" Width="150" Height="25" HorizontalContentAlignment="Right"/>
+        </StackPanel>
+    </Grid>
+</Window>
