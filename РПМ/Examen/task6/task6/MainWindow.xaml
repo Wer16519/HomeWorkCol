@@ -1,0 +1,61 @@
+﻿<Window x:Class="task6.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Name="MainWin"
+        Title="Настройка внешнего вида" Height="500" Width="600">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <GroupBox Grid.Row="0" Grid.Column="0" Header="Размер текста" Margin="5">
+            <StackPanel Margin="10">
+                <RadioButton x:Name="RbSmall"  Content="Маленький" GroupName="Size" Checked="FontSize_Changed"/>
+                <RadioButton x:Name="RbMedium" Content="Средний"   GroupName="Size" IsChecked="True" Checked="FontSize_Changed"/>
+                <RadioButton x:Name="RbLarge"  Content="Большой"   GroupName="Size" Checked="FontSize_Changed"/>
+            </StackPanel>
+        </GroupBox>
+
+        <GroupBox Grid.Row="0" Grid.Column="1" Header="Цвет формы" Margin="5">
+            <StackPanel Margin="10">
+                <RadioButton x:Name="RbBgDefault" Content="Стандартный" GroupName="Bg" IsChecked="True" Checked="FormColor_Changed"/>
+                <RadioButton x:Name="RbBgWhite"   Content="Белый"       GroupName="Bg" Checked="FormColor_Changed"/>
+                <RadioButton x:Name="RbBgBlack"   Content="Чёрный"      GroupName="Bg" Checked="FormColor_Changed"/>
+            </StackPanel>
+        </GroupBox>
+
+        <GroupBox Grid.Row="1" Grid.Column="0" Header="Цвет текста" Margin="5">
+            <StackPanel Margin="10">
+                <RadioButton x:Name="RbFgBlack" Content="Чёрный" GroupName="Fg" IsChecked="True" Checked="TextColor_Changed"/>
+                <RadioButton x:Name="RbFgWhite" Content="Белый"  GroupName="Fg" Checked="TextColor_Changed"/>
+                <RadioButton x:Name="RbFgRed"   Content="Красный" GroupName="Fg" Checked="TextColor_Changed"/>
+            </StackPanel>
+        </GroupBox>
+
+        <GroupBox Grid.Row="1" Grid.Column="1" Header="Опции окна" Margin="5">
+            <StackPanel Margin="10">
+                <CheckBox x:Name="ChkNoResize"   Content="Запретить менять размер"  Checked="Option_Changed" Unchecked="Option_Changed"/>
+                <CheckBox x:Name="ChkNoMinimize" Content="Запретить сворачивать"    Checked="Option_Changed" Unchecked="Option_Changed"/>
+                <CheckBox x:Name="ChkNoMaximize" Content="Запретить разворачивать"  Checked="Option_Changed" Unchecked="Option_Changed"/>
+            </StackPanel>
+        </GroupBox>
+
+        <GroupBox Grid.Row="2" Grid.ColumnSpan="2" Header="Размер формы (px)" Margin="5">
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <TextBlock Text="Ширина:" VerticalAlignment="Center"/>
+                <TextBox x:Name="WidthBox" Width="80" Margin="5,0,15,0" 
+                         PreviewTextInput="NumberOnly_PreviewTextInput" Text="600"/>
+                <TextBlock Text="Высота:" VerticalAlignment="Center"/>
+                <TextBox x:Name="HeightBox" Width="80" Margin="5,0,15,0" 
+                         PreviewTextInput="NumberOnly_PreviewTextInput" Text="500"/>
+                <Button Content="Применить" Width="100" Click="ApplySize_Click"/>
+            </StackPanel>
+        </GroupBox>
+    </Grid>
+</Window>
