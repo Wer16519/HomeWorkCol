@@ -1,0 +1,36 @@
+﻿<Window x:Class="T21.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:T21"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="487" Width="800">
+    <Grid Margin="5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="250"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0">
+            <Calendar x:Name="calendar" SelectedDatesChanged="Calendar_SelectedDatesChanged"/>
+            <ListBox x:Name="lstEvents" Height="150" Margin="0,5,0,0" SelectionChanged="LstEvents_SelectionChanged" DisplayMemberPath="DisplayInfo"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Margin="5">
+            <TextBox x:Name="txtTitle" Margin="0,5" Text="Название"/>
+            <TextBox x:Name="txtDesc" Margin="0,5" Text="Описание" Height="50" TextWrapping="Wrap"/>
+            <DatePicker x:Name="dpDate" Margin="0,5"/>
+            <TextBox x:Name="txtTime" Margin="0,5" Text="12:00"/>
+
+            <StackPanel Orientation="Horizontal" Margin="0,5">
+                <Button Content="Добавить" Click="BtnAdd_Click" Width="70" Margin="0,0,5,0"/>
+                <Button Content="Изменить" Click="BtnUpdate_Click" Width="70" Margin="0,0,5,0"/>
+                <Button Content="Удалить" Click="BtnDelete_Click" Width="70"/>
+            </StackPanel>
+
+            <TextBox x:Name="txtSearch" Margin="0,10,0,5" TextChanged="TxtSearch_TextChanged"/>
+            <ListBox x:Name="lstSearch" Height="100" DisplayMemberPath="DisplayInfo"/>
+        </StackPanel>
+    </Grid>
+</Window>
