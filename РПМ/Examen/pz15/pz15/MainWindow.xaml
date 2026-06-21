@@ -1,0 +1,36 @@
+﻿<Window x:Class="pz15.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:pz15"
+        mc:Ignorable="d"
+ Title="Калькулятор" Height="400" Width="500">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="0">
+            <Label Content="Число 1:" Width="80"/>
+            <TextBox x:Name="txtA" Width="100"/>
+            <Label Content="Число 2:" Width="80" Margin="20,0,0,0"/>
+            <TextBox x:Name="txtB" Width="100"/>
+        </StackPanel>
+
+        <Label Content="Операция:" Grid.Row="1" Margin="0,10,0,0"/>
+        <ListBox x:Name="lstOp" Grid.Row="2" Height="80">
+            <ListBoxItem Content="+"/>
+            <ListBoxItem Content="-"/>
+            <ListBoxItem Content="*"/>
+            <ListBoxItem Content="/"/>
+        </ListBox>
+
+        <Button Content="Вычислить" Grid.Row="3" Margin="0,10" Click="Calc_Click"/>
+        <RichTextBox x:Name="rtbResult" Grid.Row="4"/>
+    </Grid>
+</Window>

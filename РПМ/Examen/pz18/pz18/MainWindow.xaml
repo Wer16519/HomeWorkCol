@@ -1,0 +1,19 @@
+﻿<Window x:Class="pz18.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:pz18"
+        mc:Ignorable="d"
+        Title="Задание 18" Height="400" Width="400">
+    <StackPanel Margin="10">
+        <Label Content="Значение:"/>
+        <Slider x:Name="slider" Minimum="1" Maximum="20" 
+                TickFrequency="1" IsSnapToTickEnabled="True"
+                ValueChanged="Slider_Changed"/>
+        <ComboBox x:Name="cb" Margin="0,10" SelectionChanged="Cb_Changed"/>
+        <GroupBox Header="Выбор" Height="200">
+            <StackPanel x:Name="gbPanel"/>
+        </GroupBox>
+    </StackPanel>
+</Window>
